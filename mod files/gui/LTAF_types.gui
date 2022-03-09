@@ -2,6 +2,10 @@ template UniUI_LTAF_hide {
 	visible = "[Not(FactionItem.GetFaction.MakeScope.Var('loyalist_faction').IsSet)]"
 }
 
+template UniUI_LTAF_show {
+	on_start = "[GetScriptedGui('faction_window_cant_join_creater_members').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+}
+
 Types LTAF {
 	type UniUI_LTAF_loyalist_icon = icon {
 		visible = "[Faction.MakeScope.Var('loyalist_faction').IsSet]"
@@ -55,6 +59,42 @@ Types LTAF {
 			}
 
 			block "gold_income" {}
+		}
+	}
+	type UniUI_LTAF_faction_window_cant_join_creater_members = dynamicgridbox {
+		name = "LTAF_cant_join_creater_members_grid"
+		datamodel = "[GetPlayer.MakeScope.GetList('LTAF_faction_window_cant_join_creater_members')]"
+		datamodel_wrap = 4
+		flipdirection = yes
+
+		item = {
+
+			container = {
+				datacontext = "[Scope.GetCharacter]"
+
+				portrait_head_cached = {
+					# blockoverride "portrait_button_template_tooltip" {
+					# 	tooltip = "[CantCreateOrJoinFactionVassal.GetTooltip]"
+					# }
+				}
+
+				# icon = {
+				# 	size = { 60 60 }
+				# 	parentanchor = top|right
+				# 	texture = "gfx/interface/icons/faction_type/claimant_faction.dds"
+				# 	visible = "[CantCreateOrJoinFactionVassal.IsSoftBlock]"
+					
+				# 	modify_texture = {
+				# 		texture = "gfx/interface/colors/colors_textured.dds"
+				# 		blend_mode = add
+				# 		framesize = { 96 96 }
+
+				# 		block "master_color_frame" {
+				# 			frame = 5
+				# 		}
+				# 	}
+				# }
+			}
 		}
 	}
 }

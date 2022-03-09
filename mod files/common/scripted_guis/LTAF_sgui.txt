@@ -1,0 +1,39 @@
+﻿faction_window_cant_join_creater_members = {
+	scope = character
+	effect = {
+		clear_variable_list = faction_window_cant_join_creater_members
+		ordered_vassal = {
+			limit = {
+				OR = {
+					is_adult = no
+					PREV = { has_strong_hook = PREV }
+					is_allied_to = PREV
+					has_relation_friend = PREV
+					has_relation_lover = PREV
+					has_relation_soulmate = PREV
+					has_secret_relation_lover = PREV
+					trigger_if = {
+						limit = {
+							exists = joined_faction
+							joined_faction = {
+								faction_is_at_war = no
+							}
+						}
+						is_imprisoned = yes
+					}
+					has_trait = incapable
+					has_character_flag = joining_faction_block
+				}
+			}
+			max = 1000
+			check_range_bounds = no
+			order_by = highest_held_title_tier
+			PREV = {
+				add_to_variable_list = {
+					name = LTAF_faction_window_cant_join_creater_members
+					target = PREV
+				}
+			}
+		}
+	}
+}
