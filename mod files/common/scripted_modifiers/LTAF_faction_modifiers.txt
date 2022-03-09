@@ -1,0 +1,141 @@
+﻿LTAF_loyalist_faction_power_threshold_modifier = {
+	modifier = {
+		add = {
+			faction_target = {
+				every_targeting_faction = {
+					limit = { faction_is_type = loyalist_faction }
+					add = faction_power
+				}
+			}
+		}
+		faction_target = {
+			any_targeting_faction = {
+				faction_is_type = loyalist_faction
+			}
+		}
+		desc = "LOYALIST_FACTION_POWER"
+	}
+}
+
+dynamic_power_threshold_scripted_modifier = {
+	#Lower the threshold depending on the state of other factions
+	#Check if the factions types passed in parameter are:
+	#Is at war: -20
+	#Exists and is above its power theshold: -10
+	#Exists and is below its power theshold: -5
+	modifier = {
+		add = {
+			value = 0
+			
+			if = {
+				limit = {
+					faction_target = {
+						any_targeting_faction = {
+							faction_is_type = $FACTION_TYPE1$
+							faction_is_at_war = yes 
+						}
+					}
+				}
+				add = -20
+			}
+			else_if = {
+				limit = {
+					faction_target = {
+						any_targeting_faction = {
+							faction_is_type = $FACTION_TYPE1$
+							faction_is_at_war = no
+							faction_power >= faction_power_threshold
+						}
+					}
+				}
+				add = -10
+			}
+			else_if = {
+				limit = {
+					faction_target = {
+						any_targeting_faction = {
+							faction_is_type = $FACTION_TYPE1$
+							faction_is_at_war = no
+						}
+					}
+				}
+				add = -5
+			}
+
+			if = {
+				limit = {
+					faction_target = {
+						any_targeting_faction = {
+							faction_is_type = $FACTION_TYPE2$
+							faction_is_at_war = yes 
+						}
+					}
+				}
+				add = -20
+			}
+			else_if = {
+				limit = {
+					faction_target = {
+						any_targeting_faction = {
+							faction_is_type = $FACTION_TYPE2$
+							faction_is_at_war = no
+							faction_power >= faction_power_threshold
+						}
+					}
+				}
+				add = -10
+			}
+			else_if = {
+				limit = {
+					faction_target = {
+						any_targeting_faction = {
+							faction_is_type = $FACTION_TYPE2$
+							faction_is_at_war = no
+						}
+					}
+				}
+				add = -5
+			}
+
+			if = {
+				limit = {
+					faction_target = {
+						any_targeting_faction = {
+							faction_is_type = $FACTION_TYPE3$
+							faction_is_at_war = yes 
+						}
+					}
+				}
+				add = -20
+			}
+			else_if = {
+				limit = {
+					faction_target = {
+						any_targeting_faction = {
+							faction_is_type = $FACTION_TYPE3$
+							faction_is_at_war = no
+							faction_power >= faction_power_threshold
+						}
+					}
+				}
+				add = -10
+			}
+			else_if = {
+				limit = {
+					faction_target = {
+						any_targeting_faction = {
+							faction_is_type = $FACTION_TYPE3$
+							faction_is_at_war = no
+						}
+					}
+				}
+				add = -5
+			}
+			#security to never reach a power threshold equals to 0
+			min = -70
+		}
+		desc = "FACTION_POWER_INTERNAL_ISSUES"
+	}
+
+	LTAF_loyalist_faction_power_threshold_modifier = yes
+}

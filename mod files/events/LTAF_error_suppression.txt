@@ -1,0 +1,17 @@
+﻿namespace = StA_error_suppression
+
+StA_error_suppression.0001 = {
+	hidden = yes
+	orphan = yes
+
+	trigger = {
+		
+	}
+
+	immediate = {	
+		fix_variable_error = { X = LTAF_is_loaded }
+		fix_variable_error = { X = icon_override }
+		fix_variable_error = { X = loyalist_faction }
+		fix_variable_error = { X = liege_opinion }
+	}
+}

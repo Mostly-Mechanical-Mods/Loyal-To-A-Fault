@@ -1,0 +1,15 @@
+﻿on_game_start_after_lobby = {
+	on_actions = {
+		LTAF_compat
+	}
+}
+
+# Set global variable that tracks if mod is active, useful for compatibility
+LTAF_compat = {
+	effect = {
+		set_global_variable = {
+			name = LTAF_is_loaded
+			value = 0.100
+		}
+	}
+}

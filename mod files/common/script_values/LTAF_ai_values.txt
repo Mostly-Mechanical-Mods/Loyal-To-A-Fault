@@ -1,0 +1,262 @@
+﻿ai_honor_breakdown = {
+	if = {
+		limit = { has_trait = gallant }
+		add = {
+			value = low_positive_ai_value	
+			desc = "trait_gallant"
+		}
+	}
+	if = {
+		limit = { has_trait = avaricious }
+		add = {
+			value = -20
+			desc = "trait_avaricious"
+		}
+	}
+	if = {
+		limit = { has_trait = schemer }
+		add = {
+			value = -20
+			desc = "trait_schemer"
+		}
+	}
+	if = {
+		limit = { has_trait = seducer }
+		add = {
+			value = -10
+			desc = "trait_seducer"
+		}
+	}
+	if = {
+		limit = { has_trait = torturer }
+		add = {
+			value = -30
+			desc = "trait_torturer"
+		}
+	}
+	if = {
+		limit = { has_trait = lustful }
+		add = {
+			value = very_low_negative_ai_value
+			desc = "trait_lustful"
+		}
+	}
+	else_if = {
+		limit = { has_trait = chaste }
+		add = {
+			value = low_positive_ai_value
+			desc = "trait_chaste"
+		}
+	}
+	if = {
+		limit = { has_trait = greedy }
+		add = {
+			value = very_low_negative_ai_value
+			desc = "trait_greedy"
+		}
+	}
+	else_if = {
+		limit = { has_trait = generous }
+		add = {
+			value = low_positive_ai_value
+			desc = "trait_generous"
+		}
+	}
+	if = {
+		limit = { has_trait = arrogant }
+		add = {
+			value = low_negative_ai_value
+			desc = "trait_arrogant"
+		}
+	}
+	else_if = {
+		limit = { has_trait = humble }
+		add = {
+			value = low_positive_ai_value
+			desc = "trait_humble"
+		}
+	}
+	if = {
+		limit = { has_trait = deceitful }
+		add = {
+			value = high_negative_ai_value
+			desc = "trait_deceitful"
+		}
+	}
+	else_if = {
+		limit = { has_trait = honest }
+		add = {
+			value = high_positive_ai_value
+			desc = "trait_honest"
+		}
+	}
+	if = {
+		limit = { has_trait = ambitious }
+		add = {
+			value = low_negative_ai_value
+			desc = "trait_ambitious"
+		}
+	}
+	else_if = {
+		limit = { has_trait = content }
+		add = {
+			value = very_low_positive_ai_value
+			desc = "trait_content"
+		}
+	}
+	if = {
+		limit = { has_trait = arbitrary }
+		add = {
+			value = dominant_negative_ai_value
+			desc = "trait_arbitrary"
+		}
+	}
+	else_if = {
+		limit = { has_trait = just }
+		add = {
+			value = dominant_positive_ai_value
+			desc = "trait_just"
+		}
+	}
+	if = {
+		limit = { has_trait = paranoid }
+		add = {
+			value = low_negative_ai_value
+			desc = "trait_paranoid"
+		}
+	}
+	else_if = {
+		limit = { has_trait = trusting }
+		add = {
+			value = medium_positive_ai_value
+			desc = "trait_trusting"
+		}
+	}
+	if = {
+		limit = { has_trait = compassionate }
+		add = {
+			value = medium_positive_ai_value
+			desc = "trait_compasionate"
+		}
+	}
+	else_if = {
+		limit = { has_trait = callous }
+		add = {
+			value = medium_negative_ai_value
+			desc = "trait_callous"
+		}
+	}
+	if = {
+		limit = { has_trait = sadistic }
+		add = {
+			value = very_high_negative_ai_value
+			desc = "trait_sadistic"
+		}
+	}
+	if = {
+		limit = { has_trait = stubborn }
+		add = {
+			value = medium_positive_ai_value
+			desc = "trait_stubborn"
+		}
+	}
+	else_if = {
+		limit = { has_trait = fickle }
+		add = {
+			value = low_negative_ai_value
+			desc = "trait_fickle"
+		}
+	}
+	if = {
+		limit = { has_trait = vengeful }
+		add = {
+			value = very_low_negative_ai_value
+			desc = "trait_vengeful"
+		}
+	}
+	else_if = {
+		limit = { has_trait = forgiving }
+		add = {
+			value = low_positive_ai_value
+			desc = "trait_forgiving"
+		}
+	}
+	if = {
+		limit = { has_trait = rakish }
+		add = {
+			value = -10
+			desc = "trait_rakish"
+		}
+	}
+	if = {
+		limit = { has_trait = flagellant }
+		add = {
+			value = 10
+			desc = "trait_flagellant"
+		}
+	}
+	if = {
+		limit = { has_trait = contrite }
+		add = {
+			value = 10
+			desc = "trait_contrite"
+		}
+	}
+	if = {
+		limit = { has_trait = lunatic_1 }
+		add = {
+			value = -10
+			desc = "trait_lunatic_1"
+		}
+	}
+	if = {
+		limit = { has_trait = lunatic_genetic }
+		add = {
+			value = -10
+			desc = "trait_lunatic_genetic"
+		}
+	}
+	if = {
+		limit = { has_trait = eunuch }
+		add = {
+			value = -10
+			desc = "trait_eunuch"
+		}
+	}
+	if = {
+		limit = { has_trait = bastard }
+		add = {
+			value = -10
+			desc = "trait_bastard"
+		}
+	}
+	else_if = {
+		limit = { has_trait = legitimized_bastard }
+		add = {
+			value = -5
+			desc = "trait_legitimized_bastard"
+		}
+	}
+	if = {
+		limit = { has_trait = cannibal }
+		add = {
+			value = -10
+			desc = "trait_cannibal"
+		}
+	}
+	if = {
+		limit = { has_trait = adventurer }
+		add = {
+			value = low_negative_ai_value
+			desc = "trait_adventurer"
+		}
+	}
+	if = {
+		limit = { has_trait = chakravarti }
+		add = {
+			value = 40
+			desc = "trait_chakravarti"
+		}
+	}
+}
+

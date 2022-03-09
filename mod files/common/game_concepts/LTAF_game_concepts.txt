@@ -1,0 +1,3 @@
+﻿loyalty = {
+	texture = "gfx/interface/icons/faction_type/loyalist_faction.dds"
+}

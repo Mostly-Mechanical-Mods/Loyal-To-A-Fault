@@ -1,0 +1,26 @@
+﻿l_english:
+
+# Game Concept
+
+game_concept_loyalty: "Loyalty"
+game_concept_loyalty_desc: "A [vassal|E]'s Loyalty determines how likely they are to join the $loyalist_faction$, and defend the [realm|E] against domestic threats.\n\nIt depends heavily on their personality, their personal relationship with their liege, and their liege's [tyranny|E].\n\nAlthough loyal [vassals|E] are likely to join the $loyalist_faction$, they might not do so if they're [intimidated|E], or if the liege is in [debt|E] - after all, no one likes to be on the losing side.\n\nFurthermore, a [vassal|E]'s loyalty does not always supersede their personal interest: they might be loyal to the Crown, but seek nonetheless to put another Claimant on the Throne."
+
+# Loyalist Faction
+
+loyalist_faction: "Loyalist Faction"
+loyalist_faction_short_effect_desc: "Will defend the Realm against domestic threats"
+loyalist_faction_desc: "Members of the Loyalist Faction defend their liege against hostile factions."
+LOYALIST_FACTION_POWER: "Loyalist Faction: #V $VALUE|1=-$#!"
+LTAF_PRIMARY_HEIR_AT_LIEGE_COURT: "Primary Heir at liege's court"
+LTAF_HEIRS_AT_LIEGE_COURT: "Heirs at liege's court"
+
+# Loyalty
+
+loyalty: "[loyalty|E]"
+LOYALTY_TOOLTIP: "$loyalty$: [Character.MakeScope.ScriptValue('LTAF_loyalty')|+=0]"
+LTAF_PERSONALITY_HONOR: "Personality (Honor)"
+bold_claimant: "Bold Claimant"
+disgruntled_vassal: "Powerful Vassal not on the Council"
+
+LOYALTY_VALUE_FORMAT: "$KEY$: $VALUE|V+=0$"
+
