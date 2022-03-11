@@ -1,0 +1,26 @@
+﻿l_german:
+
+# Game Concept
+
+game_concept_loyalty: "Loyalität"
+game_concept_loyalty_desc: "Ein [vassal|E]'s Loyalität bestimmt, wie wahrscheinlich es ist, dass sie sich der $loyalist_faction$ anschließen und das [realm|E] gegen einheimische Bedrohungen verteidigen.\n\nDas hängt stark von ihrer Persönlichkeit, ihrer persönlichen Beziehung zu ihrem Lehnsherrn und der [tyranny|E] ihres Lehnsherrn ab. \n\nObwohl loyale [vassals|E] wahrscheinlich der $loyalist_faction$ beitreten werden, tun sie dies möglicherweise nicht, wenn sie [intimidated|E] sind oder wenn der Lehnsherr [debt|E] hat - schließlich nein man steht gerne auf der Seite der Verlierer.\n\nAußerdem steht die Loyalität eines [vassals|E] nicht immer über seinen persönlichen Interessen: Sie mögen der Krone gegenüber loyal sein, versuchen aber dennoch, einen anderen Anspruchsberechtigten auf den Thron zu setzen."
+
+# Loyalist Faction
+
+loyalist_faction: "Fraktion der Loyalen"
+loyalist_faction_short_effect_desc: "Wird das Reich gegen Bedrohungen von innen verteidigen"
+loyalist_faction_desc: "Mitglieder der Loyalen-Fraktion verteidigen ihren Lehnsherrn gegen feindliche Fraktionen."
+LOYALIST_FACTION_POWER: "Loyale Fraktion: #V $VALUE|1=-$#!"
+LTAF_PRIMARY_HEIR_AT_LIEGE_COURT: "Haupterbe am Hof ​​des Lehnsherrn"
+LTAF_HEIRS_AT_LIEGE_COURT: "Erben am Hof ​​der Lehnsherren"
+
+# Loyalty
+
+loyalty: "[loyalty|E]"
+LOYALTY_TOOLTIP: "$loyalty$: [Character.MakeScope.ScriptValue('LTAF_loyalty')|+=0]"
+LTAF_PERSONALITY_HONOR: "Persönliche Ehre"
+bold_claimant: "Mutiger Kläger"
+disgruntled_vassal: "Mächtiger Vasall ist nicht im Rat"
+
+LOYALTY_VALUE_FORMAT: "$KEY$: $VALUE|V+=0$"
+

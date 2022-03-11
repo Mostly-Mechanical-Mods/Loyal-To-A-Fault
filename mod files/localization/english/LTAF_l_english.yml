@@ -23,4 +23,3 @@ bold_claimant: "Bold Claimant"
 disgruntled_vassal: "Powerful Vassal not on the Council"
 
 LOYALTY_VALUE_FORMAT: "$KEY$: $VALUE|V+=0$"
-

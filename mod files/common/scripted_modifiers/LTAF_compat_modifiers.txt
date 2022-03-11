@@ -1,4 +1,4 @@
-﻿LTAF_loyalist_faction_power_threshold_modifier = {
+﻿LTAF_loyalist_faction_modifier = {
 	modifier = {
 		add = {
 			faction_target = {
