@@ -15,5 +15,21 @@ LTAF_error_suppression.0001 = {
 		fix_variable_error = { X = liege_opinion }
 		fix_variable_error = { X = LTAF_faction_window_cant_join_creater_members }
 		fix_variable_error = { X = faction_window_cant_join_creater_members }
+		fix_variable_error = { X = LTAF_loyalty_personality_honor }
+		fix_variable_error = { X = LTAF_loyalty_tyranny }
+		fix_variable_error = { X = LTAF_loyalty_alliance }
+		fix_variable_error = { X = LTAF_loyalty_personality_honor }
+		fix_variable_error = { X = LTAF_loyalty_primary_claimant }
+		fix_variable_error = { X = LTAF_loyalty_higher_tier_claim }
+		fix_variable_error = { X = LTAF_loyalty_empire_claim }
+		fix_variable_error = { X = LTAF_loyalty_kingdom_claim }
+		fix_variable_error = { X = LTAF_loyalty_duchy_claim }
+		fix_variable_error = { X = LTAF_loyalty_disgruntled_vassal }
+		fix_variable_error = { X = LTAF_loyalty_primary_heir_at_court }
+		fix_variable_error = { X = LTAF_loyalty_close_family_members_at_court }
+		fix_variable_error = { X = LTAF_loyalty_cultural_acceptance }
+		fix_variable_error = { X = LTAF_loyalty_clan_vassal }
+		fix_variable_error = { X = LTAF_loyalty_tribal_liege }
+		fix_variable_error = { X = LTAF_loyalty_gupta_government }
 	}
 }

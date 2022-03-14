@@ -416,7 +416,7 @@ types  FactionWindow
 				UniUI_LTAF_loyalist_icon = {}
 				# [/LTAF] [/UniUI]
 				
-				portrait_head_ = {
+				portrait_head = {
 					datacontext = "[Faction.GetSpecialCharacter]"
 					visible = "[Faction.HasSpecialCharacter]"
 					parentanchor = center

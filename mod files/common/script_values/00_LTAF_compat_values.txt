@@ -1,0 +1,3 @@
+﻿LTAF_loyalty_gupta_government = {
+	value = 0
+}

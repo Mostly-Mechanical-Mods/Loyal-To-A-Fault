@@ -1,0 +1,10 @@
+widget = {
+	size = { 0 0 }
+	name = "LTAF_gui_setup"
+	widgetid = "LTAF_gui_setup"
+	state = {
+		name = "LTAF_gui_setup"
+		trigger_on_create = yes
+		on_start = "[GetScriptedGui('LTAF_gui_setup_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	}
+}

@@ -2,4 +2,5 @@
 
 # common\scripted_modifiers\LTAF_compat_faction_modifiers.txt
 
-LOYALIST_FACTION_POWER: "$loyalist_faction$"
+LOYALIST_FACTION_POWER: "$loyalist_faction$: #V $VALUE|0$#!"
+

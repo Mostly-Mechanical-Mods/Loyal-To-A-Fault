@@ -1,0 +1,67 @@
+﻿# A title is transferred to a new character
+# root = the new holder
+# scope:title = the title that changes hands
+# scope:previous_holder = previous holder. Might be dead
+on_title_gain = {
+	on_actions = {
+		LTAF_on_title_gain
+	}
+}
+
+LTAF_on_title_gain = {
+	trigger = {
+		scope:title.tier >= tier_duchy
+	}
+	effect = {
+		debug_log = "LTAF_on_title_gain"
+		debug_log_scopes = yes
+		switch = {
+			trigger = scope:transfer_type
+			flag:conquest = { scope:title = { set_variable = { name = transfer_type value = flag:conquest }}}
+			flag:conquest_holy_war = { scope:title = { set_variable = { name = transfer_type value = flag:conquest_holy_war }}}
+			flag:conquest_claim = { scope:title = { set_variable = { name = transfer_type value = flag:conquest_claim }}}
+			flag:conquest_populist = { scope:title = { set_variable = { name = transfer_type value = flag:conquest_populist }}}
+			flag:inheritance = { scope:title = { set_variable = { name = transfer_type value = flag:inheritance }}}
+			flag:abdication = { scope:title = { set_variable = { name = transfer_type value = flag:abdication }}}
+			flag:destroyed = { scope:title = { set_variable = { name = transfer_type value = flag:destroyed }}}
+			flag:created = { scope:title = { set_variable = { name = transfer_type value = flag:created }}}
+			flag:usurped = { scope:title = { set_variable = { name = transfer_type value = flag:usurped }}}
+			flag:granted = { scope:title = { set_variable = { name = transfer_type value = flag:granted }}}
+			flag:revoked = { scope:title = { set_variable = { name = transfer_type value = flag:revoked }}}
+			flag:election = { scope:title = { set_variable = { name = transfer_type value = flag:election }}}
+			flag:independency = { scope:title = { set_variable = { name = transfer_type value = flag:independency }}}
+			flag:returned = { scope:title = { set_variable = { name = transfer_type value = flag:returned }}}
+			flag:leased_out = { scope:title = { set_variable = { name = transfer_type value = flag:leased_out }}}
+			flag:lease_revoked = { scope:title = { set_variable = { name = transfer_type value = flag:lease_revoked }}}
+			flag:faction_demand = { scope:title = { set_variable = { name = transfer_type value = flag:faction_demand }}}
+			flag:swear_fealty = { scope:title = { set_variable = { name = transfer_type value = flag:swear_fealty }}}
+		}
+		if = {
+			limit = {
+				trigger_if = {
+					limit = { exists = scope:previous_holder }
+					NOT = { dynasty = scope:previous_holder.dynasty }
+				}
+			}
+			set_variable = {
+				name = LTAF_dynasty_rule
+				value = 0
+			}
+		}
+	}
+}
+
+on_title_destroyed = {
+	on_actions = {
+		LTAF_on_title_destroyed
+	}
+}
+
+LTAF_on_title_destroyed = {
+	trigger = {
+		scope:landed_title = { has_variable = LTAF_dynasty_rule }
+	}
+	effect = {
+		scope:landed_title = { remove_variable = LTAF_dynasty_rule }
+	}
+}

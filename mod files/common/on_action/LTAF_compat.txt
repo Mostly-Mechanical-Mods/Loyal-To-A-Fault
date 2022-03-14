@@ -9,7 +9,7 @@ LTAF_compat = {
 	effect = {
 		set_global_variable = {
 			name = LTAF_is_loaded
-			value = 0.100
+			value = 1.03
 		}
 	}
 }

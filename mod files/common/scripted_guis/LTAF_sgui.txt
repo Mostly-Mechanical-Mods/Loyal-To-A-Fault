@@ -37,3 +37,39 @@
 		}
 	}
 }
+
+LTAF_gui_setup_sgui = {
+	scope = character
+	effect = {
+		clear_variable_list = LTAF_loyalty_script_value_gui
+		set_global_variable = { name = LTAF_loyalty_personality_honor value = flag:LTAF_loyalty_personality_honor }
+		set_global_variable = { name = LTAF_loyalty_tyranny value = flag:LTAF_loyalty_tyranny }
+		# set_global_variable = { name = LTAF_loyalty_alliance value = flag:LTAF_loyalty_alliance }
+		set_global_variable = { name = LTAF_loyalty_primary_claimant value = flag:LTAF_loyalty_primary_claimant }
+		set_global_variable = { name = LTAF_loyalty_empire_claim value = flag:LTAF_loyalty_empire_claim }
+		set_global_variable = { name = LTAF_loyalty_kingdom_claim value = flag:LTAF_loyalty_kingdom_claim }
+		set_global_variable = { name = LTAF_loyalty_duchy_claim value = flag:LTAF_loyalty_duchy_claim }
+		set_global_variable = { name = LTAF_loyalty_disgruntled_vassal value = flag:LTAF_loyalty_disgruntled_vassal }
+		# set_global_variable = { name = LTAF_loyalty_primary_heir_at_court value = flag:LTAF_loyalty_primary_heir_at_court }
+		# set_global_variable = { name = LTAF_loyalty_close_family_members_at_court value = flag:LTAF_loyalty_close_family_members_at_court }
+		set_global_variable = { name = LTAF_loyalty_cultural_acceptance value = flag:LTAF_loyalty_cultural_acceptance }
+		set_global_variable = { name = LTAF_loyalty_clan_vassal value = flag:LTAF_loyalty_clan_vassal }
+		set_global_variable = { name = LTAF_loyalty_tribal_liege value = flag:LTAF_loyalty_tribal_liege }
+		set_global_variable = { name = LTAF_loyalty_gupta_government value = flag:LTAF_loyalty_gupta_government }
+		
+		add_to_global_variable_list = { name = LTAF_loyalty_script_value_gui target = global_var:LTAF_loyalty_personality_honor }
+		add_to_global_variable_list = { name = LTAF_loyalty_script_value_gui target = global_var:LTAF_loyalty_tyranny }
+		# add_to_global_variable_list = { name = LTAF_loyalty_script_value_gui target = global_var:LTAF_loyalty_alliance }
+		add_to_global_variable_list = { name = LTAF_loyalty_script_value_gui target = global_var:LTAF_loyalty_primary_claimant }
+		add_to_global_variable_list = { name = LTAF_loyalty_script_value_gui target = global_var:LTAF_loyalty_empire_claim }
+		add_to_global_variable_list = { name = LTAF_loyalty_script_value_gui target = global_var:LTAF_loyalty_kingdom_claim }
+		add_to_global_variable_list = { name = LTAF_loyalty_script_value_gui target = global_var:LTAF_loyalty_duchy_claim }
+		add_to_global_variable_list = { name = LTAF_loyalty_script_value_gui target = global_var:LTAF_loyalty_disgruntled_vassal }
+		# add_to_global_variable_list = { name = LTAF_loyalty_script_value_gui target = global_var:LTAF_loyalty_primary_heir_at_court }
+		# add_to_global_variable_list = { name = LTAF_loyalty_script_value_gui target = global_var:LTAF_loyalty_close_family_members_at_court }
+		add_to_global_variable_list = { name = LTAF_loyalty_script_value_gui target = global_var:LTAF_loyalty_cultural_acceptance }
+		add_to_global_variable_list = { name = LTAF_loyalty_script_value_gui target = global_var:LTAF_loyalty_clan_vassal }
+		add_to_global_variable_list = { name = LTAF_loyalty_script_value_gui target = global_var:LTAF_loyalty_tribal_liege }
+		add_to_global_variable_list = { name = LTAF_loyalty_script_value_gui target = global_var:LTAF_loyalty_gupta_government }
+	}
+}

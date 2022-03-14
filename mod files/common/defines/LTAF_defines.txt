@@ -1,0 +1,42 @@
+﻿NCharacterOpinion = {
+	# What penalty to give when at zero culture acceptance. Scales down to 0 at 100% acceptance. So -10 would be -10 at 0%, -5 at 50%, 0 at 100%
+	# [LTAF] Same define as ZERO_CULTURE_ACCEPTANCE. Difference plays out in Loyalty instead.
+	ZERO_CULTURE_ACCEPTANCE_SAME_REALM = -15
+
+	# SHORT_REIGN_YEARS = 10
+	# LONG_REIGN_YEARS = 10
+	# SHORT_REIGN_MULTIPLIER = -2
+	# LONG_REIGN_MULTIPLIER = 1
+
+	# The offensive war opinion penalty is applied to all direct vassals
+	# It ticks up if you lead an offensive war that isn't a Great Holy War or a civil war
+	# OFFENSIVE_WAR_PENALTY_GRACE_PERIOD = 6		# How many months do you need to be at war before you start getting the offensive war opinion penalty? If you've already got the penalty, the grace period is ignored (E.G., if you go to war for a few years, are at peace for a few months, then go to war again it will immediately start ticking up)
+	# OFFENSIVE_WAR_PENALTY_PER_MONTH = 0.5		# How much of a penalty gets added each month?
+	# OFFENSIVE_WAR_PENALTY_DECAY_PER_MONTH = 0.5	# How much of a penalty decays each month when no longer gaining it?
+	
+	# AT_PEACE_PENALTY_GRACE_PERIOD = 6			# How many months do you need to be at peace before you start getting the at peace opinion penalty? If you've already got the penalty, the grace period is ignored
+	# AT_PEACE_PENALTY_PER_MONTH = 0.5			# How much of a penalty gets added each month?
+	# AT_PEACE_PENALTY_CAP = 30					# The penalty will be capped to this value (the opinion will be at worst -AT_PEACE_PENALTY_CAP)
+
+	HOLDS_CLAIMED_TITLE = 0
+
+	# DEFENDING_ME_IN_CLAIM_WAR = 100
+
+	POWERFUL_VASSAL_WITHOUT_COUNCIL_POSITION = 0
+
+	# IS_ON_THE_COUNCIL = 10
+
+	# DE_JURE_COUNTY = -25
+	# DE_JURE_DUCHY = -25
+	# DE_JURE_KINGDOM = -30
+	# EMPIRE_IS_VALID_DE_JURE_LIEGE_FOR_DUCHY = yes 		# Dukes won't be upset as the vassal of their dejure emperor
+
+	# PARTIALLY_NON_RIGHTFUL_LIEGE_OPINION = -5 			# Opinion penalty for being non-rightful liege
+	# NON_RIGHTFUL_LIEGE_OPINION = -5						# Opinion penalty for being partially non-rightful liege
+	# MAX_DUCHIES_BEFORE_PENALTY = 2						# How many duchies are vassals fine with you having? If you're a duke, they don't care; only if you're king or above
+	# TOO_MANY_DUCHIES_OPINION = -15						# Penalty per duchy too many
+	# COUNT_LIEGE_HOLDS_MY_DUCHY = -25					# Penalty with count vassals for whom you hold their dejure duchy (and you're above duchy tier)
+	# VASSAL_SIZE_ANGER_THRESHOLD = 0.3						# Ratio of counties in vassal's realm (duke or above) compared to liege's full realm in order for the vassal to get angry at liege
+	# VASSAL_SIZE_ANGER_MIN = -5								# Opinion penalty applied at exact threshold
+	# VASSAL_SIZE_ANGER_MULT = -100							# Opinion penalty applied for going 100 percentage points over the threshold (impossible unless the threshold is 0, but makes for simple math)
+}

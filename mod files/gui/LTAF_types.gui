@@ -40,7 +40,7 @@ Types LTAF {
 			set_parent_size_to_minimum = yes
 			margin = { 14 8 }
 			margin_bottom = 18
-			spacing = 14
+			# spacing = 14
 
 			# block "my_gold" {}
 
@@ -53,11 +53,21 @@ Types LTAF {
 				layoutpolicy_horizontal = expanding
 			}
 
-			text_single = {
-				layoutpolicy_horizontal = expanding
-				text = "[Character.MakeScope.GetScriptValueDesc('LTAF_loyalty')]"
-			}
+			# text_single = {
+			# 	layoutpolicy_horizontal = expanding
+			# 	text = "[Character.MakeScope.GetScriptValueDesc('LTAF_loyalty')]"
+			# }
 
+			datamodel = "[GetGlobalList('LTAF_loyalty_script_value_gui')]"
+			item = {
+				text_single = {
+					visible = "[Not(EqualTo_CFixedPoint(Character.MakeScope.ScriptValue(Scope.GetFlagName),'(CFixedPoint)0'))]"
+					layoutpolicy_horizontal = expanding
+					text = "[Localize(Concatenate(Scope.GetFlagName,'_desc'))]: [Character.MakeScope.ScriptValue(Scope.GetFlagName)|+=0]"
+					tooltip = "[Character.MakeScope.GetScriptValueDesc(Scope.GetFlagName)]"
+					using = tooltip_se
+				}
+			}
 			block "gold_income" {}
 		}
 	}
@@ -72,7 +82,7 @@ Types LTAF {
 			container = {
 				datacontext = "[Scope.GetCharacter]"
 
-				portrait_head_cached = {
+				portrait_head = {
 					# blockoverride "portrait_button_template_tooltip" {
 					# 	tooltip = "[CantCreateOrJoinFactionVassal.GetTooltip]"
 					# }
