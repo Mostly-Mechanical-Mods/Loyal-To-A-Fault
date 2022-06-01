@@ -170,11 +170,11 @@ window = {
 										text_single = {
 											text = "FACTIONS_WINDOW_CASSALC_CANT_CREATE_JOIN"
 										}
-
+										# [UniUI] [LTAF]
 										UniUI_LTAF_faction_window_cant_join_creater_members = {}
-
+										# [/LTAF]
 										dynamicgridbox = {
-											# [UniUI] [Vanilla] Not LTAF
+											# [Vanilla] Not LTAF
 											visible = "[Not(GetGlobalVariable('LTAF_is_loaded').IsSet)]"
 											# [/Vanilla] [/UniUI]
 											name = "cant_join_creater_members_grid"
@@ -407,7 +407,7 @@ types  FactionWindow
 				icon_flat_standard = {
 					# [UniUI] [Vanilla]
 					visible = "[And(Not( Faction.HasSpecialCharacter ),Not(Faction.MakeScope.Var('icon_override').IsSet))]"
-					# [UniUI] [/Vanilla]
+					# [/Vanilla] [/UniUI]
 					size = { 120 120 }
 					texture = "[Faction.GetIcon]"
 				}

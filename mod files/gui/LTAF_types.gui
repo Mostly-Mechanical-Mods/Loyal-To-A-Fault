@@ -19,12 +19,12 @@ Types LTAF {
 		}
 		icon = {
 			visible = "[GreaterThan_CFixedPoint(Character.MakeScope.ScriptValue('LTAF_loyalty'),'(CFixedPoint)0')]"
-			size = { 30 30 }
+			size = { 25 25 }
 			texture = "gfx/interface/icons/LTAF_loyal.dds"
 		}
 		icon = {
 			visible = "[LessThanOrEqualTo_CFixedPoint(Character.MakeScope.ScriptValue('LTAF_loyalty'),'(CFixedPoint)0')]"
-			size = { 30 30 }
+			size = { 25 25 }
 			texture = "gfx/interface/icons/LTAF_disloyal.dds"
 		}
 	}
