@@ -1,0 +1,7 @@
+﻿LTAF_is_loyalist = {
+	OR = {
+		is_a_faction_leader = yes
+		is_a_faction_member = yes
+	}
+	joined_faction = { faction_is_type = loyalist_faction }
+}
