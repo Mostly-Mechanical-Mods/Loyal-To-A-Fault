@@ -17,6 +17,7 @@ LTAF_on_war_started = {
 				using_cb = independence_war
 				using_cb = peasant_war
 				using_cb = claim_cb
+				using_cb = nation_fracturing_faction_war
 			}
 			scope:defender = {
 				any_targeting_faction = {
