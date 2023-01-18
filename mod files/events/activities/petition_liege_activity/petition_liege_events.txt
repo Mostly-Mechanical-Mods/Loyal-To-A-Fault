@@ -26,7 +26,8 @@ scripted_effect petition_liege_0001_refuse_petitioner_effect = {
 		}
 		progress_towards_rival_effect = {
 			CHARACTER = scope:petition_liege
-			OPINION = no
+			REASON = rival_petition_liege
+			OPINION = 0
 		}
 	}
 }

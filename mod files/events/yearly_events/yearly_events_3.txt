@@ -1467,7 +1467,7 @@ yearly.3012 = {
 				opinion = 30
 			}
 		}
-		set_relation_friend = scope:vassal
+		set_relation_friend = { reason = friend_feast_for_liege target = scope:vassal involved_character = scope:liege }
 	}
 
 	option = {
@@ -1570,7 +1570,7 @@ yearly.3013 = {
 				opinion = 15
 			}
 		}
-		set_relation_friend = scope:vassal
+		set_relation_friend = { reason = friend_feast_for_liege target = scope:vassal involved_character = scope:liege }
 	}
 
 	option = {
@@ -1670,7 +1670,7 @@ yearly.3014 = {
 				opinion = -10
 			}
 		}
-		set_relation_friend = scope:vassal
+		set_relation_friend = { reason = friend_feast_for_liege target = scope:vassal involved_character = scope:liege }
 	}
 
 	option = {
@@ -2130,10 +2130,13 @@ yearly.3031 = {
 							limit = {
 								exists = scope:gain_rival
 							}
+							liege = { save_scope_as = relationship_reason_involved_character }
 							progress_towards_rival_effect = {
+								REASON = rival_competing_for_liege
 								CHARACTER = scope:fellow_vassal
-								OPINION = no
+								OPINION = 0
 							}
+							clear_saved_scope = relationship_reason_involved_character
 						}
 						else = {
 							random = {
@@ -2215,10 +2218,13 @@ yearly.3031 = {
 							limit = {
 								exists = scope:gain_rival
 							}
+							liege = { save_scope_as = relationship_reason_involved_character }
 							progress_towards_rival_effect = {
+								REASON = rival_competing_for_liege
 								CHARACTER = scope:fellow_vassal
-								OPINION = no
+								OPINION = 0
 							}
+							clear_saved_scope = relationship_reason_involved_character
 						}
 						else = {
 							random = {
@@ -2310,10 +2316,13 @@ yearly.3031 = {
 							limit = {
 								exists = scope:gain_rival
 							}
+							liege = { save_scope_as = relationship_reason_involved_character }
 							progress_towards_rival_effect = {
+								REASON = rival_competing_for_liege
 								CHARACTER = scope:fellow_vassal
-								OPINION = no
+								OPINION = 0
 							}
+							clear_saved_scope = relationship_reason_involved_character
 						}
 						else = {
 							random = {
@@ -2494,10 +2503,13 @@ yearly.3031 = {
 							limit = {
 								exists = scope:gain_rival
 							}
+							liege = { save_scope_as = relationship_reason_involved_character }
 							progress_towards_rival_effect = {
+								REASON = rival_competing_for_liege
 								CHARACTER = scope:fellow_vassal
-								OPINION = no
+								OPINION = 0
 							}
+							clear_saved_scope = relationship_reason_involved_character
 						}
 						else = {
 							random = {
@@ -2580,10 +2592,13 @@ yearly.3031 = {
 							limit = {
 								exists = scope:gain_rival
 							}
+							liege = { save_scope_as = relationship_reason_involved_character }
 							progress_towards_rival_effect = {
+								REASON = rival_competing_for_liege
 								CHARACTER = scope:fellow_vassal
-								OPINION = no
+								OPINION = 0
 							}
+							clear_saved_scope = relationship_reason_involved_character
 						}
 						else = {
 							random = {
@@ -2679,10 +2694,13 @@ yearly.3031 = {
 							limit = {
 								exists = scope:gain_rival
 							}
+							liege = { save_scope_as = relationship_reason_involved_character }
 							progress_towards_rival_effect = {
+								REASON = rival_competing_for_liege
 								CHARACTER = scope:fellow_vassal
-								OPINION = no
+								OPINION = 0
 							}
+							clear_saved_scope = relationship_reason_involved_character
 						}
 						else = {
 							random = {
@@ -2789,10 +2807,13 @@ yearly.3031 = {
 					limit = {
 						exists = scope:gain_rival
 					}
+					liege = { save_scope_as = relationship_reason_involved_character }
 					progress_towards_rival_effect = {
+						REASON = rival_competing_for_liege
 						CHARACTER = scope:fellow_vassal
-						OPINION = no
+						OPINION = 0
 					}
+					clear_saved_scope = relationship_reason_involved_character
 				}
 				else = {
 					random = {
@@ -3230,7 +3251,10 @@ yearly.3051 = {
 				}
 				can_set_relation_rival_trigger = { CHARACTER = scope:vassal }
 			}
-			set_relation_rival = scope:vassal
+			set_relation_rival = {
+				target = scope:vassal
+				reason = rival_confiscated_title
+			}
 		}
 		else_if = {
 			limit = {

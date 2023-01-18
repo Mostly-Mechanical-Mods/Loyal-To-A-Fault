@@ -189,7 +189,10 @@
 
 	scope:actor = {
 		if = {
-			limit = { scope:hook = yes }
+			limit = {
+				scope:hook = yes
+				scope:recipient = { is_alive = yes }
+			}
 			use_hook = scope:recipient
 		}
 	}
@@ -220,12 +223,16 @@
 				}
 				remove_relation_potential_rival = scope:actor
 			}
-			set_relation_rival = scope:actor
+			set_relation_rival = {
+				target = scope:actor
+				reason = rival_revoked_title_reversed
+			}
 		}
 		else = {
 			progress_towards_rival_effect = {
 				CHARACTER = scope:actor
-				OPINION = no
+				REASON = rival_revoked_title_progress
+				OPINION = 0
 			}
 		}
 	}
